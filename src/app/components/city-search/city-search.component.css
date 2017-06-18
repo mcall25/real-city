@@ -1,0 +1,11 @@
+.city-search-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
