@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { HeroService } from '../city-search/hero.service';
 
 @Component({
   selector: 'app-city-details',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CityDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input('currentCity') data: any;
+
+  today = new Date()
+
+
+  // constructor(private loggingService: LoggingService,
+  //             private accountsService: AccountsService) {
+  //   this.accountsService.statusUpdated.subscribe(
+  //     (status: string) => alert('New Status: ' + status)
+  //   );
+  // }
+
+  constructor(private heroService: HeroService) { }
+
+
+
+
+
 
   ngOnInit() {
+
+
   }
+
+
+
 
 }

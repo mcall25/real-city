@@ -1,7 +1,7 @@
 <!--nav bar-->
 <nav class="navbar ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a (click)="search = true" class="navbar-brand" href="#">
       <img src="../assets/realcitylogo.png" class="d-inline-block align-top logo" alt="">
     </a>
   </div>
@@ -9,11 +9,13 @@
 
 
 
-
-
 <div class="container">
 
-    <app-city-search></app-city-search>
+
+    <app-city-search *ngIf="search" (intervalFired)="onCurrentCity($event)" ></app-city-search>
+
+    <app-city-details  *ngIf="!search" [currentCity]="currentCity" > </app-city-details>
+
 
 </div>
 

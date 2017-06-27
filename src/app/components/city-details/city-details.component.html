@@ -1,3 +1,83 @@
-<p>
-  city-details works!
-</p>
+
+<div class="row align-center ">
+  <div class="col-xs-10 col-sm-8 col-md-6">
+
+    <div class="input-group input-group-lg ">
+      <input #city  (keyup)="0" type="text" class="form-control" placeholder="Dallas, TX" aria-describedby="basic-addon2">
+      <span class="input-group-btn relative-position ">
+      <button  class="btn btn-secondary" type="button"><img class="search-img" src="../assets/searchButtonImage.png" alt=""></button>
+      </span>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row align-center ">
+
+  <div class="col-xs-12 col-sm-10 scale-container ">
+    <div class="col-xs-6 margin-top-20 ">
+      <div class="city-title">Snap Shot of {{data.name}}</div>
+      <div>{{today | date: 'MMM yyyy'}}</div>
+    </div>
+
+    <div class="col-xs-6 ">
+      <div>
+          <div class="flex-container">
+            <div class="flex-sub-container"> <div class="city-score">{{data.score}} </div> <div>/ 10</div>  </div>
+            <div class="market-status">Hot Market</div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 ">
+
+      <div class="position" >
+        <img style="width: 100%" src="../../assets/b.png" >
+        <img [style.left]="data.score+'%'" style="position: absolute; width: 8%;"  src="../../assets/h.png" >
+        <!--<div [style.left]="data.score+'%'" class="num">{{data.score}}</div>-->
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row align-center ">
+  <div class="col-xs-4 margin-top-25px">
+
+    <div class="out">
+
+      <div class="big" >{{data.score}}</div>
+      <div class="sm" >Median Home Price</div>
+
+    </div>
+
+  </div>
+
+  <div class="col-xs-4">
+
+    <div class="out">
+
+      <div class="big" >{{data.score}}</div>
+      <div class="sm" > /SQFT</div>
+
+    </div>
+
+  </div>
+
+  <div class="col-xs-4">
+
+    <div class="out">
+
+      <div class="big" >{{data.score}}</div>
+      <div class="sm" >Active Listings*</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
